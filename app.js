@@ -5,7 +5,6 @@ const sql = require('mssql');
 const express = require("express");
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const mapValues = require('object.map');
 const app = express();
 var key = 0;
 app.use(bodyParser.urlencoded({extended: false}))
@@ -80,7 +79,7 @@ connection.connect((err) => {
     }
     else {
       console.log("Users query at /User successfully!") 
-      res.send("<are>kdbksjsabslafbdslfbsalfblsadfblsbfsaflskbflsfsblsabfl\n\nsdfljsdhfksjdfhsdalfhasdfjlsdhalfjsahfasdfhsdjfhaslkfsdhklfhsdfjl</pre>")
+      res.json(rows);
     }
     connection.close()
 })
@@ -115,8 +114,7 @@ connection.connect((err) => {
     }
     else {
       console.log("Users query at /User successfully!")
-      const Users = new sql.map({abc:'123'})
-      res.json(Users);
+      res.json(rows);
     }
     connection.close()
 })
