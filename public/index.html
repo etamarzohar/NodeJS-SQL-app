@@ -1,0 +1,428 @@
+<html>
+  <head>
+    <title>MyWebsite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:skyblue;
+	background-attachment: scroll;
+	color:black;
+	text-align: center;
+	text-rendering: auto;
+	background-image:url('https://wallpaperaccess.com/full/958722.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 1920px 1080px;
+}
+.btn {
+	background-color: dodgerblue;
+	color: white;
+	padding: 15px 20px;
+	border: none;
+	cursor: pointer;
+	width: 26%;
+	opacity: 0.9;
+  }
+  
+  .btn:hover {
+	opacity: 1;
+  }
+
+.input-container {
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	width: 100%;
+	margin-bottom: 15px;
+  }
+  
+  .icon {
+	padding: 10px;
+	background: dodgerblue;
+	color: white;
+	min-width: 50px;
+	text-align: center;
+  }
+  
+  .input-field {
+	width: 100%;
+	padding: 10px;
+	outline: none;
+  }
+  
+  .input-field:focus {
+	border: 2px solid dodgerblue;
+  }
+  
+  /* Set a style for the submit button */
+ 
+form {	
+	display: block;
+	width: auto;
+  	color: black;
+  	text-align: left;
+  	padding: 16px;
+	text-decoration: none;
+}
+
+table,th,td{
+
+		border:1px solid #ddd;
+		border-collapse:collapse;
+		text-align:center;
+		background-color: #f2f2f2;
+		width:300px;margin-left:auto;margin-right:auto;overflow-x:auto;
+	}
+
+	tr:nth-child(even) {
+		background-color: #f2f2f2;
+	  }
+
+h1 {
+	text-align:center;
+	color:red;
+	border:2px solid gold;
+	padding:25px;
+	font-family:"Italic";
+}
+
+ul {
+	list-style-type:none;
+	margin-left:auto;
+	margin-right:auto;
+ 	overflow: hidden;
+  	}
+
+li {
+	float: left;
+	margin-left:auto;
+	margin-right:auto;
+}
+li a {
+	margin-left:auto;margin-right:auto;
+  	display: block;
+  	color: white;
+  	text-align: center;
+  	padding: 16px;
+	text-decoration: none;
+}
+
+li a:hover {	
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.calc {
+	padding: 10px;
+	float:right;
+	margin-left:auto;margin-right:auto;
+}
+
+.spa
+{
+	text-align: center;
+	padding: 10px;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+  }
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+  }
+  
+  button:hover {
+	opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+  }
+  
+  img.avatar {
+	width: 40%;
+	border-radius: 50%;
+  }
+  
+  .container {
+	padding: 16px;
+  }
+  
+  span.psw {
+	float: right;
+	padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: red;
+	cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)} 
+	to {-webkit-transform: scale(1)}
+  }
+	
+  @keyframes animatezoom {
+	from {transform: scale(0)} 
+	to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+	span.psw {
+	   display: block;
+	   float: none;
+	}
+	.cancelbtn {
+	   width: 100%;
+	}
+  }</style>
+  </head>
+  <body onload="startTime();">
+<script language="JavaScript">
+      function showInput() {
+
+        document.getElementById('dis_user').innerHTML = "";
+
+        var MyName = document.getElementById("user"),
+         MyImg = document.getElementById("image"),
+         MyEmail = document.getElementById("email"),
+         MyPassword = document.getElementById("password");
+         MyBirth = document.getElementById("birth");
+
+        document.getElementById('dis_user').innerHTML = "\t"+MyName.value+"\t";
+        document.getElementById('dis_password').innerHTML = "\t"+MyPassword.value+"\t";
+        document.getElementById('dis_birth').innerHTML = "\t"+MyBirth.value+"\t";
+
+
+        if(MyEmail.value.match("@gmail.com"))
+      {
+        document.getElementById('dis_email').innerHTML = "\t"+MyEmail.value+"\t";
+      }
+      else if (MyEmail.value==''){document.getElementById('dis_email').innerHTML = "";}
+      else {document.getElementById('dis_user').innerHTML = "ERROR_OGAR:";
+        document.getElementById('dis_email').innerHTML = " Only Gmail Accounts";
+        document.getElementById('dis_password').innerHTML = " Ristricted";}
+//MyImg.src = "https://images.pexels.com/photos/"+MyName.value+"/pexels-photo-"+MyName.value+".jpeg";
+      }
+      </script>
+      <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+        <script>function wellcome() {var uname = document.getElementById("uname");
+          var psw = document.getElementById("psw").value.toString(10);
+          var check_user = document.getElementById("user");
+          var check_psw = document.getElementById("password").value.toString(10);
+          if(check_user.value == uname.value && check_psw == psw)
+          {
+          alert("Welcome " + uname.value + "\n" + " your password is: " + psw);
+          document.getElementById('usern').innerHTML = uname.value;
+          document.getElementById('usern').style.color='greenyellow';
+          document.getElementById('id01').style.display='none'}
+          else{alert("EROR_ACCOUNT:User name or password doe's not match");}
+        }
+          </script>
+    <b><p class = "calc">degrees Fahrenheit:<input id="f" onkeyup="convert('F')" /></p></b>
+    <b><p class = "calc">degrees Celsius:<input id="c" onkeyup="convert('C')" /></p></b>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+      <script>
+        function reg() {
+    var x = document.getElementById('regis');
+    if(x.style.display == "none") {x.style.display = "block"}
+    else { x.style.display = "none"}
+  }
+  </script>
+  <script>
+  function showTime() 
+    {
+      var s = document.getElementById("boga");
+      if(s.style.display == "none") {s.style.display = "block"}
+      else { s.style.display = "none"}
+    }
+    </script>
+      <ul>
+          <li><a href="#" id = "usern">Welcome</a></li>
+          <li><a href="http://localhost:3000/" target="_blank">home</a></li>
+          <li><a href="https://discord.com/login">discord</a></li>
+          <li><a href="http://localhost:3000/" download>download</a></li>
+          <li><a href="#" onclick="reg();">register</a></li>
+          <li><a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">login</a> </li>
+          <li><a href="#" onclick="showTime();">clock</a></li>
+          <li><a id = "boga" style="display:none;"></a></li>
+
+          <div id="id01" class="modal">
+
+            <form class="modal-content animate">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="https://newcastlebeach.org/images/img_avatar2-3.png" alt="Avatar" class="avatar">
+              </div>
+
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" id="uname" required>
+          
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="psw" required>
+                  
+                <input type="button" class="btn" value="login" onclick="wellcome();">
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+
+
+      </ul>
+      <div id="regis" style="display:block;">
+  <form style="max-width:500px;margin:auto" action="/user_create" method="POST">
+    <div class="input-container">
+      <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" name="create_user" placeholder="Username" id="user"/><br/>
+    </div>
+    <div class="input-container">
+      <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="create_email" id="email"/><br/>
+    </div>
+    <div class="input-container">
+      <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="create_password" id="password"/><br/>
+    </div>
+    <div class="input-container">
+      <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" name="create_birth" placeholder="Date Of Birth (Year-Month-Day)" id="birth"/><br/>
+    </div>
+    <button>Submit</button>
+  </form>
+  <input class="btn" type="button" value="Send To Table" onclick="showInput();"/><br/>
+  <br>
+      <table>
+        <tr> 
+          <b><th>User_Name</th></b>
+	        <b><th>E-mail</th></b>
+          <b><th>Password</th></b>
+          <b><th>Date Of Birth</th></b>
+        </tr>
+        <tr>
+            <td class="spa">   <span id="dis_user"></span>   </td>
+            <td class="spa">   <span id="dis_email"></span>   </td>
+            <td class="spa">   <span id="dis_password"></span>   </td>
+            <td class="spa">   <span id="dis_birth"></span>   </td>
+        </tr>
+       </table>
+      </div>
+    <script>
+      function convert(degree) {
+        var x;
+        if (degree == 'C') {
+          x = document.getElementById('c').value * 9 / 5 + 32;
+          document.getElementById('f').value = Math.round(x);
+        } else {
+          x = (document.getElementById('f').value -32) * 5 / 9;
+          document.getElementById('c').value = Math.round(x);
+        }
+      }
+      
+      </script>
+
+<script>
+  function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById("boga").innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+  }
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
+  </script>
+  </body>
+</html>
+
+
